@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ComposeNumbers">
+
+    <Button
+        android:id="@+id/ComposeReturnMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:onClick="Return"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="16dp" />
+
+    <LinearLayout
+        android:id="@+id/layoutContent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/ComposeReturnMain"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/ComposeNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Target Number:"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/edtFirstNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="First number"
+            android:inputType="none"
+            android:focusable="false" />
+
+        <EditText
+            android:id="@+id/edtSecondNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Second number"
+            android:inputType="none"
+            android:focusable="false"
+            android:layout_marginTop="8dp" />
+
+        <GridLayout
+            android:id="@+id/btnGrid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alignmentMode="alignMargins"
+            android:columnCount="3"
+            android:rowCount="4"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:padding="5dp">
+
+            <Button android:id="@+id/btn1" android:text="1" android:onClick="numberClicked" style="@style/NumberPadButton" />
+            <Button android:id="@+id/btn2" android:text="2" android:onClick="numberClicked" style="@style/NumberPadButton" />
+            <Button android:id="@+id/btn3" android:text="3" android:onClick="numberClicked" style="@style/NumberPadButton" />
+            <Button android:id="@+id/btn4" android:text="4" android:onClick="numberClicked" style="@style/NumberPadButton" />
+            <Button android:id="@+id/btn5" android:text="5" android:onClick="numberClicked" style="@style/NumberPadButton" />
+            <Button android:id="@+id/btn6" android:text="6" android:onClick="numberClicked" style="@style/NumberPadButton" />
+            <Button android:id="@+id/btn7" android:text="7" android:onClick="numberClicked" style="@style/NumberPadButton" />
+            <Button android:id="@+id/btn8" android:text="8" android:onClick="numberClicked" style="@style/NumberPadButton" />
+            <Button android:id="@+id/btn9" android:text="9" android:onClick="numberClicked" style="@style/NumberPadButton" />
+
+            <View android:layout_width="0dp" android:layout_height="0dp" style="@style/NumberPadButton"/>
+            <Button android:id="@+id/btn0" android:text="0" android:onClick="numberClicked" style="@style/NumberPadButton" />
+            <Button android:id="@+id/btnDelete" android:text="⌫" android:onClick="deleteClicked" style="@style/NumberPadButton" />
+
+        </GridLayout>
+
+        <Button
+            android:id="@+id/btnCheck"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="compNumAns"
+            android:text="Check"
+            android:layout_marginTop="12dp" />
+
+        <Button
+            android:id="@+id/btnNewNum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="compNumGenerate"
+            android:text="Next Question"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/AnsResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

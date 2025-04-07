@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CompareNumbers">
+
+    <Button
+        android:id="@+id/CompareReturnMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:onClick="Return"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="16dp" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/RandomNumbers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:text="0  ?  0"/>
+
+        <Button
+            android:id="@+id/btnGreater"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="checkAns"
+            android:text="Greater"
+            android:tag="greater"/>
+
+        <Button
+            android:id="@+id/btnLesser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="checkAns"
+            android:text="Lesser"
+            android:tag="lesser"/>
+
+        <Button
+            android:id="@+id/btnEqual"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="checkAns"
+            android:text="Equal"
+            android:tag="equal"/>
+
+        <Button
+            android:id="@+id/btnNew"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="generateNumbers"
+            android:text="Next Question"/>
+
+        <TextView
+            android:id="@+id/AnsResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
